@@ -19,7 +19,7 @@ pipeline {
                 }
             }
         }
-        stage('Testing') {
+        stage('Test') {
             steps {
                 dir('apis/poi') {
                     sh "dotnet test"
