@@ -9,11 +9,6 @@ pipeline {
                 sh "echo 'poi-container'"
                 sh "ls"
                 sh "docker info"
-                sh "docker build -t devops/api-poi:${BUILD_NUMBER} $WORKSPACE/apis/poi/web/."
-                sh "docker tag devops/api-poi:${BUILD_NUMBER} openhackgpj2acr.azurecr.io/devopsoh/api-poi:latest"
-                sh "docker tag devops/api-poi:${BUILD_NUMBER} openhackgpj2acr.azurecr.io/devopsoh/api-poi:${BUILD_NUMBER}"
-                sh "docker login openhackgpj2acr.azurecr.io -u $AzureACRKey_USR -p $AzureACRKey_PSW"
-                sh "docker push openhackgpj2acr.azurecr.io/devopsoh/api-poi:${BUILD_NUMBER}"
             }
         }
     }
