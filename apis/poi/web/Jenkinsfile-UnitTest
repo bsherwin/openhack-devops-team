@@ -12,8 +12,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "cd $WORKSPACE/apis/poi"
-                sh "ls"
+                sh "dotnet build /apis/poi/poi.sln"
             }
         }
         stage('Test') {
