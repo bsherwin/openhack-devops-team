@@ -1,5 +1,4 @@
 pipeline {
-    agent { dockerfile true }
     environment {
         AzureACRKey = credentials('AzureACR')
     }
