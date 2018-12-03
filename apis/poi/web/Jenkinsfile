@@ -8,7 +8,6 @@ pipeline {
             steps {
                 sh "echo 'poi-container'"
                 sh "ls"
-                sh "docker info"
             }
         }
     }
