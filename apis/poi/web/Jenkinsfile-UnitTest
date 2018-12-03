@@ -12,7 +12,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "dotnet build \apis\poi\poi.sln"
+                sh "cd apis/poi"
+                sh "dotnet restore"
+                sh "dotnet build poi.sln"
             }
         }
         stage('Test') {
