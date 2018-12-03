@@ -21,7 +21,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "ls"
+                dir('apis/poi') {
+                    sh "dotnet test"
+                } 
             }
         }
 
